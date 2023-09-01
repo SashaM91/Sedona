@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: url("../fonts/Montserrat-SemiBold.ttf"), url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: url("../fonts/fonts/Montserrat-Medium.ttf"), url("../fonts/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Cormorant";
+    font-weight: 500;
+    src: url("../fonts/CormorantGaramond-Medium.ttf"), url("../fonts/CormorantGaramond-Medium.ttf");
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: #fff;
+}
+
+label,
+button {
+    cursor: pointer;
+}
+
+h1,h2{
+    font-family: "Cormorant", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
