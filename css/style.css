@@ -21,7 +21,14 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    background-color: #fff;
+    background-color: #FCF8F5;
+    width: 1600px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 label,
@@ -29,10 +36,146 @@ button {
     cursor: pointer;
 }
 
-h1,h2{
+h1,h2,h3{
     font-family: "Cormorant", sans-serif;
     font-size: 64px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-transform: uppercase;
+}
+.header-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+.nav-list{
+    display: flex;
+    gap: 30px;
+}
+.nav-link{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.hero-section{
+    background-color: rgba(71, 52, 35, 0.5);
+    background-image:  url('../img/maine.jpg');
+    margin-top: -150px;
+    display:flex;
+    align-items: flex-end;   
+    width: 1600px;
+    height: 930px;
+    flex-shrink: 0;          
+}
+.maine-title{
+    color:#fff;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 102px;
+    padding-bottom: 80px;
+}
+.article-section{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 643px;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+.description{
+    display:flex;
+    flex-direction: column;
+    height: 643px;
+}
+.why_visit{
+    padding-right: 201px;
+    padding-left: 100px;
+    color:#B5AEA4;
+    text-transform: uppercase;
+}
+.why_visit.current::before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color:#B5AEA4;
+}
+.article-title{
+    padding-left: 114px;
+    padding-right: 114px;
+    padding-top: 81px;
+    padding-bottom: 180px;
+    color:#373737;
+}
+.bottom-text{
+    padding-left: 112px;
+    padding-right: 220px;
+}
+
+
+
+
+
+
+
+.article-section-2{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 643px;
+    padding-top: 200px;
+    padding-left: 100px;
+}
+.description-2{
+    display:flex;
+    flex-direction: column;
+    height: 643px;
+}
+.why_visit-2{
+    padding-right: 181px;
+    padding-left: 190px;
+    color:#B5AEA4;
+    text-transform: uppercase;
+}
+.why_visit-2.current::before {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background-color:#B5AEA4;
+}
+.article-title-2{
+    padding-left: 125px;
+    padding-right: 103px;
+    padding-top: 80px;
+    padding-bottom: 180px;
+    color:#373737;
+}
+.bottom-text-2{
+    padding-left: 101px;
+    padding-right: 231px;
+}
+
+
+
+.footer{
+    background-color: #B5885D;
+    display:flex;
+    justify-content: space-between;
+}
+.footer-link{
+    display:flex;
+    justify-content: space-between;
+   
+}
+.table-name{
+    display:flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 301px;
 }
