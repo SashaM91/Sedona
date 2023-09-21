@@ -22,7 +22,7 @@ body {
     font-weight: 500;
     line-height: normal;
     background-color: #FCF8F5;
-    width: 1600px;
+    margin: 0;
 }
 
 ul {
@@ -62,41 +62,59 @@ h1,h2,h3{
 }
 .hero-section{
     background-color: rgba(71, 52, 35, 0.5);
-    background-image:  url('../img/maine.jpg');
-    margin-top: -150px;
+    background-image: linear-gradient(0deg, rgba(71, 52, 35, 0.5),
+                     rgba(71, 52, 35, 0.5)), url('../img/maine.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -120px;
     display:flex;
-    align-items: flex-end;   
-    width: 1600px;
-    height: 930px;
-    flex-shrink: 0;          
+    align-items: flex-end;
+    padding-top: 694px;
+    padding-bottom: 80px;
 }
+
+.hero-section-apartment{
+    background-color: rgba(71, 52, 35, 0.5);
+    background-image: linear-gradient(0deg, rgba(71, 52, 35, 0.5),
+                     rgba(71, 52, 35, 0.5)), url('../img/maine.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -120px;
+    display:flex;
+    align-items: flex-end;
+    padding-top: 318px;
+    padding-bottom: 80px;
+}
+
 .maine-title{
     color:#fff;
     text-transform: uppercase;
     display:flex;
     justify-content: space-between;
-    padding-left: 100px;
-    padding-right: 102px;
-    padding-bottom: 80px;
+    width: 1398px;
+    margin: 0 auto;
+    /* padding-left: 100px; */
+    /* padding-right: 102px; */
 }
 .article-section{
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     height: 643px;
-    padding-top: 200px;
-    padding-left: 100px;
+    padding-top: 200px; 
+    /* padding-left: 100px; */
 }
 .description{
     display:flex;
     flex-direction: column;
-    height: 643px;
+    /* height: 643px; */
+    width: 471px;
 }
-.why_visit{
-    padding-right: 201px;
-    padding-left: 100px;
+.why_visit {
     color:#B5AEA4;
     text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 81px;    
 }
 .why_visit.current::before {
     position: absolute;
@@ -106,18 +124,18 @@ h1,h2,h3{
     background-color:#B5AEA4;
 }
 .article-title{
-    padding-left: 114px;
-    padding-right: 114px;
-    padding-top: 81px;
-    padding-bottom: 180px;
     color:#373737;
+    margin: 0;
+    margin-bottom: auto;
 }
 .bottom-text{
-    padding-left: 112px;
-    padding-right: 220px;
+    margin: 0;
 }
 
-
+.featuires-list {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 
 
@@ -160,17 +178,19 @@ h1,h2,h3{
     padding-left: 101px;
     padding-right: 231px;
 }
-
-
-
 .footer{
     background-color: #B5885D;
     display:flex;
     justify-content: space-between;
+    height: 280px;
 }
 .footer-link{
     display:flex;
     justify-content: space-between;
+    padding-bottom: 68px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-left: 776px;
    
 }
 .table-name{
@@ -179,3 +199,62 @@ h1,h2,h3{
     flex-wrap: wrap;
     padding-top: 301px;
 }
+.result-and-hotel-filter{
+    display:flex;
+}
+.results{
+    padding-left: 100px;
+    padding-right: 590px;
+    padding-top: 51;
+    }
+.result-clear{
+    padding-top: 97px;
+    padding-bottom: 81px;
+}
+.infrastructure{
+    padding-top: 51px;
+    padding-bottom: 48px;
+    padding-right: 73px;
+    padding-left: 524px;
+}
+.type-of-housing{
+    padding-right: 98px;
+    padding-bottom: 48px;
+    padding-top: 50px;
+}
+.price{
+    padding-top: 51px;
+    padding-bottom: 50px;
+    padding-right: 100px;
+}
+.article{
+    display: flex;
+    padding-left: 101px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.hotel-and-point{
+    display: block;
+    padding-left: 20px;
+}
+.hotel-name{
+    display: flex;
+}
+.article-hotel-price{
+    padding-left: 249px;
+}
+/*не работает топ?*/
+.more-details{
+    padding-right: 298px;
+    margin-top: 5000px;
+}
+.html-academy{
+    padding-left: 808px;
+    padding-bottom: 25px;
+}
+.footer-link-right{
+    padding-top: 50px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+}    
