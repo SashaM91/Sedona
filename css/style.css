@@ -44,6 +44,21 @@ h1,h2,h3{
     line-height: normal;
     text-transform: uppercase;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 .header-wrapper{
     display:flex;
     justify-content: space-between;
@@ -212,10 +227,12 @@ h1,h2,h3{
     padding-bottom: 81px;
 }
 .infrastructure{
-    padding-top: 51px;
+    /* padding-top: 51px;
     padding-bottom: 48px;
     padding-right: 73px;
-    padding-left: 524px;
+    padding-left: 524px; */
+    display: flex;
+    flex-direction: column;
 }
 .type-of-housing{
     padding-right: 98px;
@@ -258,3 +275,44 @@ h1,h2,h3{
     display: flex;
     flex-direction: column;
 }    
+
+.info-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.type {
+    width: 100%;
+}
+
+.name {
+    width: 50%;
+    margin: 0;
+    font-size: 28px;
+}
+
+.article-hotel-price {
+    width: 50%;
+    padding: 0;
+    text-align: right;
+}
+
+.label {
+    position: relative;
+}
+
+.label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #B5AEA4;
+    left: -31px;
+}
+
+#pool:checked ~ .label::before {
+    background-image: url('../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
