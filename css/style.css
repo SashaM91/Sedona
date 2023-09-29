@@ -23,9 +23,10 @@ body {
     line-height: normal;
     background-color: #FCF8F5;
     margin: 0;
+    padding: 0;
 }
 
-ul {
+.ul-article {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -36,6 +37,115 @@ button {
     cursor: pointer;
 }
 
+
+.label {
+    position: relative;
+}
+
+.label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #B5AEA4;
+    left: -31px;
+}
+
+.label-date {
+    position: relative;
+    color: var(--grey, #B5AEA4);
+    
+
+/* text/text 2 */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    top:50px;
+}
+
+.label-person {
+    position: relative;
+    color: var(--grey, #B5AEA4);
+
+/* text/text 2 */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    top:50px;
+}
+
+.label-person::before{
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 1px;
+    flex-shrink: 0;
+    border: 1px solid #B5AEA4;
+    left: -31;
+    top: 20px; 
+    margin-right: 10px;
+}
+
+.label-person::after{
+    content: url('../img/person.png');
+    position: absolute;
+    left: 95px;
+    bottom: 15px;
+}
+
+.label-date::before {
+    content: '';
+    position: absolute;
+    width: 473px;
+    height: 1px;
+    flex-shrink: 0;
+    border: 1px solid #B5AEA4;
+    left: -31;
+    top: 20px; 
+}
+
+.label-date::after{
+        content: url('../img/calend.png');
+        position: absolute;
+        left: 350px;
+        bottom: 15px;
+}
+
+
+#pool:checked ~ .label::before {
+    background-image: url('../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#parking:checked ~ .label::before {
+    background-image: url('../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#Wi-fi:checked ~ .label::before {
+    background-image: url('../img/check.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.date{
+    display: flex;
+    padding-bottom: 50px;
+
+}
+
+
+
+
+
+
 h1,h2,h3{
     font-family: "Cormorant", sans-serif;
     font-size: 64px;
@@ -43,9 +153,8 @@ h1,h2,h3{
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
+    margin: 0;
 }
-
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -60,6 +169,9 @@ h1,h2,h3{
     overflow: hidden;
   }
 
+  
+
+
 .header-wrapper{
     display:flex;
     justify-content: space-between;
@@ -71,6 +183,7 @@ h1,h2,h3{
 .nav-list{
     display: flex;
     gap: 30px;
+    list-style: none;
 }
 .nav-link{
     text-decoration: none;
@@ -113,12 +226,18 @@ h1,h2,h3{
     /* padding-left: 100px; */
     /* padding-right: 102px; */
 }
+.article-list{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 .article-section{
     display:flex;
     justify-content: space-between;
     /* align-items: center; */
     height: 643px;
+    max-width: 1400px;
     padding-top: 200px; 
+    margin: 0 auto;
     /* padding-left: 100px; */
 }
 .description{
@@ -142,7 +261,6 @@ h1,h2,h3{
     margin: -1px;
     border: 0;
     padding: 0;
-    
     white-space: nowrap;
     
 }
@@ -156,11 +274,22 @@ h1,h2,h3{
 }
 
 .featuires-list {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
+.bottom-form {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
 
+.recommendation{
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
@@ -171,6 +300,8 @@ h1,h2,h3{
     height: 643px;
     padding-top: 200px;
     text-align: left;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .description-2{
     display:flex;
@@ -186,7 +317,8 @@ h1,h2,h3{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin: 0;
+    
+
 }
 .why_visit-2.current::before {
     position: absolute;
@@ -214,47 +346,126 @@ h1,h2,h3{
 }
 .footer{
     background-color: #B5885D;
-    display:flex;
-    justify-content: space-between;
-    height: 280px;
+    height: 290px;
 }
 .footer-link{
     display:flex;
     justify-content: space-between;
     padding-bottom: 68px;
     padding-right: 100px;
-    padding-top: 50px;
-    padding-left: 776px;
-   
+    list-style: none;
+    
+    
 }
 .table-name{
     display:flex;
-    align-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 301px;
+    padding-top: 80px;
+}
+.indicate-expected-dates{
+    margin: 0 auto;
+    width: 353px;
+}
+.form-and-map{
+    display: flex;
+    max-width: 1600px;
+    justify-content: space-between;
+    padding-bottom: 199px;
+}
+.map{
+    width: 810px;
+    height: 450px;
+    margin-top: 86px;
+    
+}
+.form-down{
+    padding-left: 60px;
+    margin-right: 320px;
+    margin-right: 0;
+    padding-top:50px;
+    margin-left: 30px;
+}
+.form-top{
+    padding-left: 60px;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+}
+
+.adults-child-form{
+    display: flex;
+    justify-content: space-between;
+
+}
+.footer-link-top{
+    padding-top: 50px;
+    padding-left: 100px;
+    display: flex;
+    justify-content: space-between;
+}  
+.index-link{
+    height: 130px;
+    text-decoration: none;
+}
+.social-link{
+    height: 100px;
+}
+
+.line{
+    border: none; /* Убираем границу */
+    background: var(--grey, #B5AEA4);
+    height: 1px;
+    flex-shrink: 0;
+    
+}  
+
+.html-academy{
+    padding-top: 25px;
+    padding-right: 80px;
+}
+
+.website-by{
+    padding-left: 100px;
+    padding-bottom: 10px;
+    color: var(--white, #FFF);
+}
+.decoration-link{
+    text-decoration: none;
 }
 .result-and-hotel-filter{
     display:flex;
 }
 .results{
     padding-left: 100px;
-    padding-right: 590px;
     padding-top: 51;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     }
 .result-clear{
     padding-top: 97px;
     padding-bottom: 81px;
+    color: var(--beige, #B5885D);
+    /* text/main text */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 .infrastructure{
     padding-top: 51px;
     padding-bottom: 48px;
     padding-right: 73px;
-    padding-left: 524px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .type-of-housing{
     padding-right: 98px;
     padding-bottom: 48px;
     padding-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
 .price{
     padding-top: 51px;
@@ -263,32 +474,93 @@ h1,h2,h3{
 }
 .article{
     display: flex;
-    padding-left: 101px;
+    padding-left: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
+    
 }
 .hotel-and-point{
     display: block;
-    padding-left: 20px;
+    padding-left: 25px;
+    width: 100%;
+    margin-right: 100px;
+    
+}
+.results-number{
+    color: var(--beige, #B5885D);
+    /* text/main text */
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
 }
 .hotel-name{
     display: flex;
 }
-.article-hotel-price{
-    padding-left: 249px;
+.name-form{
+    color: var(--grey, #B5AEA4);
+    /* text/text 2 */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    left: 20px;
 }
+
+.info-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.type {
+    width: 100%;
+}
+.name {
+    width: 50%;
+    margin: 0;
+    font-size: 28px;
+}
+
+
+.image{
+    width: 689px;
+    height: 380px;
+}
+
+.article-hotel-price{
+    width: 50%;
+    padding: 0;
+    text-align: right;
+} 
 /*не работает топ?*/
 .more-details{
     padding-right: 298px;
     margin-top: 5000px;
+    color: var(--grey, #B5AEA4);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    padding-top: 245px;
 }
-.html-academy{
-    padding-left: 808px;
-    padding-bottom: 25px;
+.detalis-button{
+    padding-top: 190px;
 }
-.footer-link-right{
-    padding-top: 50px;
-    padding-left: 100px;
+
+.visitsedona{
     display: flex;
-    flex-direction: column;
-}    
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.bottom-links{
+    display: flex;
+    justify-content: space-between;
+}
