@@ -60,7 +60,7 @@
                   </p>
                 </div>
                 <div>
-                  <a href="" class="result-clear">Очистить фильтры</a>
+                  <button type="submit" class="result-clear">Очистить фильтры</button>
                 </div>  
               </div>
               <form class="form-top" action="#" method="post">
@@ -85,13 +85,15 @@
                   <label class="label" for="hotel">
                     Гостиница
                   </label>
+                  <input type="checkbox" class="visually-hidden" id="motel" name="motel" value="Мотель">
                   <label class="label" for="motel">
                     Мотель
-                    <input type="checkbox" class="visually-hidden" id="motel" name="motel" value="Мотель">
+                    
                   </label>
+                  <input type="checkbox" class="visually-hidden" id="apartment" name="apartment" value="apartment">
+
                   <label class="label" for="apartment">
                     Апартаменты
-                    <input type="checkbox" class="visually-hidden" id="apartment" name="apartment" value="apartment">
                   </label>
                 </div>  
               </div>    
@@ -106,26 +108,28 @@
             <section>
               <ul>
                 <li class="article">
-                  <div>
-                    <img class="image" src="./img/hotel1.png"  alt="Amara resort & spa">
-                  </div>
-                  <div class="hotel-and-point">
-                    <div class="hotel-name">
-                      <div class="info-flex">
-                        <p class="type">гостиница</p>
-                        <h2 class="name">Amara resort & spa</h2>
-                        <p class="article-hotel-price">от 4000 р</p>
-                        <p>8.5</p>
-                      </div>
-                    </div> 
-                    <div class="detalis-button">
-                      <a href="#" class="more-details">Подробнее</a>
-                      <button>Забронировать</button> 
+                  <div class="image">
+                      <img src="./img/hotel1.png" width="689px" height="380px" alt="Amara resort & spa">
                     </div>
-                  </div>
+                    <div class="hotel-and-point">
+                      <div class="hotel-name">
+                        <div class="info-flex">
+                          <p class="type">гостиница</p>
+                          <h2 class="name">Amara resort & spa</h2>
+                          <p>8.5</p>
+                          <a href="#" class="more-details">Подробнее</a>
+                        </div>
+                        <div class="detalis-button">
+                          <div>
+                            <p class="article-hotel-price">от 4000 р</p>
+                          </div>
+                          <div>
+                            <button type="submit" class="book-in-button">Забронировать</button> 
+                          </div>
+                    </div>                   
                 </li> 
                 <li class="article">
-                  <div>
+                  <div class="image">
                     <img class="image" src="./img/hotel2.png"   alt="Desert Quail inn">
                   </div>
                   <div class="hotel-and-point">
@@ -133,18 +137,20 @@
                       <div class="info-flex">
                         <p class="type">гостиница</p>
                         <h2 class="name">Desert Quail inn</h2>
-                        <p class="article-hotel-price">от 3000 р</p>
                         <p>8.5</p>
-                      </div> 
-                    </div>  
-                  <div class="detalis-button">
-                    <a href="#" class="more-details">Подробнее</a>
-                      <button>Забронировать</button> 
-                  </div>
-                  </div>                    
+                        <a href="#" class="more-details">Подробнее</a>
+                      </div>
+                      <div class="detalis-button">
+                        <div>
+                          <p class="article-hotel-price">от 3000 р</p>
+                        </div>
+                        <div>
+                          <button type="submit" class="book-in-button">Забронировать</button> 
+                        </div>
+                  </div>      
                 </li>
                 <li class="article">
-                  <div>
+                  <div class="image">
                     <img class="image" src="./img/hotel3.png"   alt="Villas at poco diablo">
                   </div>
                   <div class="hotel-and-point">
@@ -152,34 +158,57 @@
                       <div class="info-flex">
                         <p class="type">гостиница</p>
                         <h2 class="name">Villas at poco diablo</h2>
-                        <p class="article-hotel-price">от 2000 р</p>
                         <p>8.5</p>
+                        <a href="#" class="more-details">Подробнее</a>
                       </div>
-                    </div>
-                    <div class="detalis-button">
-                      <a href="#" class="more-details">Подробнее</a>
-                      <button>Забронировать</button> 
-                    </div>
-                  </div>                    
+                      <div class="detalis-button">
+                        <div>
+                          <p class="article-hotel-price">от 2000 р</p>
+                        </div>
+                        <div>
+                          <button type="submit" class="book-in-button">Забронировать</button>
+                        </div>
+                  </div>  
                 </li> 
                 <li class="article">
-                  <div >
+                  <div class="image">
                     <img class="image" src="./img/hotel4.png"   alt="The Penrose B&B">
                   </div>
                   <div class="hotel-and-point">
-                      <div class="hotel-name">
-                        <div class="info-flex">
-                          <p class="type">гостиница</p>
-                          <h2 class="name">The Penrose B&B</h2>
-                          <p class="article-hotel-price">от 4500 р</p>
-                          <p>8.5</p>
-                        </div>
-                      </div> 
-                      <div class="detalis-button">
+                    <div class="hotel-name">
+                      <div class="info-flex">
+                        <p class="type">гостиница</p>
+                        <h2 class="name">The Penrose B&B</h2>
+                        <p>8.5</p>
                         <a href="#" class="more-details">Подробнее</a>
-                        <button>Забронировать</button> 
                       </div>
-                  </div>                    
+                      <div class="detalis-button">
+                        <div>
+                          <p class="article-hotel-price">от 4500 р</p>
+                        </div>
+                        <div>
+                          <button type="submit" class="book-in-button">Забронировать</button>
+                        </div>
+                  </div>      
+                <li class="article">
+                  <div class="image">
+                    <img src="./img/hotel4.png" width="689px" height="380px"  alt="The Penrose B&B">
+                  </div>
+                  <div class="hotel-and-point">
+                    <div class="hotel-name">
+                      <div class="info-flex">
+                        <p class="type">гостиница</p>
+                        <h2 class="name">The Penrose B&B</h2>
+                        <p>8.5</p>
+                        <a href="#" class="more-details">Подробнее</a>
+                      </div>
+                      <div class="detalis-button">
+                        <div>
+                          <p class="article-hotel-price">от 4500 р</p>
+                        </div>
+                        <div>
+                          <button type="submit" class="book-in-button">Забронировать</button>
+                        </div>
                 </li>
               </ul>
             </section>  

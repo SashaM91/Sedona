@@ -93,7 +93,7 @@
                         <h3 class="article-title">Мало туристов</h3>
                         <p class="bottom-text">Большинство едет в Гранд Каньон
                         и толпится там.</p>
-                    </div>
+                      </div>
                   </li>
                   <li class="article-section-2">
                     <div class="description-2">
@@ -104,10 +104,22 @@
                     </li>
                 </ul>
                 <div class="recommendation">
-                  <p class="bottom-text-2">Рекомендуем пожить в настоящем мотеле,
-                    всё как в кино!
-                  </p>
-                  <button></button><button></button><span></span></span>
+                  <div>
+                    <p class="bottom-text-2">Рекомендуем пожить в настоящем мотеле,
+                     всё как в кино!
+                    </p>
+                  </div>
+                  <div class="button-arrows">
+                    <div>
+                      <button class="circus-button-left"> </button>
+                    </div>
+                    <div>
+                      <button class="circus-button"> </button>
+                    </div>
+                  </div>
+                    <div>
+                      <span class="slider"></span>
+                    </div>  
                 </div>
               </section>
               <section class="bottom-form">
@@ -120,43 +132,28 @@
                     </p>
                 </div>
               </section>  
-                <div class="form-and-map">  
-                  <form class="form-down" action="#" method="post">
-                    <div class="date">
-                      <label class="label-date" for="arrival date">
-                        Дата заезда
-                      </label>
-                      <input class="visually-hidden" type="date" name="Дата заезда">
-                    </div>  
-                    <div class="date">
-                      <label class="label-date" for="date of departure">
-                        Дата выезда
-                      </label>
-                      <input class="visually-hidden" type="date" name="Дата выезда">
-                    </div> 
-                    <div class="adults-child-form">
-                      <div>
-                      <label class="label-person" for="date of departure">
-                        взрослые
-                      </label>
-                      <input class="visually-hidden" type="number" name="взрослые">
-                      </div>
-                      <div>
-                      <label class="label-person" for="date of departure">
-                        дети
-                      </label>
-                      <input class="visually-hidden" type="number" name="дети">
-                    </div>
-                      <div class="date">
-                        <input type="submit" value="Забронировать" id="">
-                      </div>
-                    </div>
-                    
-                  </form>
-                  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d209540.7102596082!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0ZbQt9C-0L3QsCA4NjMzNiwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1692814272362!5m2!1suk!2sua" 
-                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-                </div>
+              <div class="form-and-map">  
+                <form class="form-down" action="#" method="post">
+                  <label class="form-down-label">
+                    <input type="text" name="checkin" id="checkin" class="form-down-input" placeholder="Дата заезда">
+                  </label>
+                  <label class="form-down-label">
+                    <input type="text" name="checkout" id="checkout" class="form-down-input" placeholder="Дата выезда">
+                  </label>
+                  <div class="flex-container">
+                    <label class="form-down-label">
+                      <input type="number" name="adults" id="adults" min="1" max="10" value="1" class="form-down-input">	
+                    </label>
+                    <label class="form-down-label">
+                      <input type="number" name="kids" id="kids" min="0" max="10" value="0" class="form-down-input">	
+                    </label>
+                  </div>
+                  <button type="submit" class="book-in-button">Забронировать</button>
+                </form>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d209540.7102596082!2d-111.795138!3d34.854378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0ZbQt9C-0L3QsCA4NjMzNiwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1692814272362!5m2!1suk!2sua" 
+                  width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
               </section>
             </section>
         </main>  
@@ -210,10 +207,9 @@
 
         
       </div>
-      <hr class="line">
       <div class="bottom-links">
         <div class="website-by">
-          <p>Website by</p>
+          <p class="link-autor">Website by</p>
         </div>
         <div class="html-academy">
           <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="146" height="50" viewBox="0 0 146 50" fill="none">
