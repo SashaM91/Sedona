@@ -98,41 +98,57 @@
                 </div>  
               </div>    
               <div class="price">
-                <legend>Цена</legend>
-                  <input type="number" name="min">
-                  <input type="number" name="max"><br>
-                  <input type="range" min="0" max="2000" value="50" class="slider" id="price">
-              </div>        
+                <legend class="name-form-price">Цена</legend>
+                <div class="input-price">
+                  <div>
+                    <input type="number" name="min">
+                  </div>  
+                  <div>                 
+                    <input type="number" name="max"><br>
+                  </div> 
+                </div>  
+                <div>
+                  <input type="range" min="0" max="2000" value="50" class="visually-hidden" id="price">
+                </div> 
+                  <div class="range-control">
+                    <span class="range-dot"></span>   
+                    <span class="range-before-track"></span> 
+                    <span class="range-dot"></span>  
+                    <span class="range-after-track"></span>  
+                  </div>
+                     
                 </form>
             </section>
-            <section>
+            <section class="article-list">
               <ul class="ul">
-                <div class="for-down-line">
+                
                   <li class="article">
-                    <div class="image">
-                        <img src="./img/hotel1.png" width="689px" height="380px" alt="Amara resort & spa">
+                 
+                      <div class="image">
+                          <img src="./img/hotel1.png" width="689px" height="380px" alt="Amara resort & spa">
                       </div>
-                      <div class="hotel-and-point">
-                        <div class="hotel-name">
-                          <div class="info-flex">
-                            <p class="type">гостиница</p>
-                            <h2 class="name">Amara resort & spa</h2>
-                            <div>
-                              <p class="score">8.5</p>
+                        <div class="hotel-and-point">
+                          <div class="hotel-name">
+                            <div class="info-flex">
+                              <p class="type">гостиница</p>
+                              <h2 class="name">Amara resort & spa</h2>
+                              <div>
+                                <p class="score">8.5</p>
+                              </div>
+                              <a href="#" class="more-details">Подробнее</a>
                             </div>
-                            <a href="#" class="more-details">Подробнее</a>
-                          </div>
-                          <div class="detalis-button">
-                            <div>
-                              <p class="article-hotel-price">от 4000 ₽</p>
-                            </div>
-                            <div class="div-button">
-                              <button type="submit" class="book-in-button">Забронировать</button> 
-                            </div>
-                      </div>                   
+                            <div class="detalis-button">
+                              <div>
+                                <p class="article-hotel-price">от 4000 ₽</p>
+                              </div>
+                              <div class="div-button">
+                                <button type="submit" class="book-in-button">Забронировать</button> 
+                              </div>
+                        </div>  
+                                
                   </li> 
-              </div>
-              <div class="for-down-line">
+              
+              
                   <li class="article">
                     <div class="image">
                       <img class="image" src="./img/hotel2.png"   alt="Desert Quail inn">
@@ -154,8 +170,8 @@
                           </div>
                     </div>
                 </li>
-              </div> 
-              <div class="for-down-line">
+              
+              
                 <li class="article">
                   <div class="image">
                     <img class="image" src="./img/hotel3.png"   alt="Villas at poco diablo">
@@ -177,8 +193,8 @@
                         </div>
                   </div>  
                 </li> 
-              </div>
-                <div class="for-down-line"> 
+             
+                 
                 <li class="article">
                   <div class="image">
                     <img class="image" src="./img/hotel4.png"   alt="The Penrose B&B">
@@ -200,7 +216,7 @@
                         </div>
                   </div>     
                   </li> 
-                 </div>
+                 
               </ul>
             </section>  
           </main>
@@ -214,42 +230,15 @@
               <div class="social-link">
                 <ul class="footer-link">
                     <li>
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                        <g clip-path="url(#clip0_410_102)">
-                          <path d="M32.1146 11.2077C30.5232 11.2074 28.9954 11.8345 27.8598 12.954C26.7242 14.0734 26.0716 15.5958 26.0425 17.1935L25.9839 20.5049C25.9805 20.6827 25.9396 20.8578 25.8641 21.0186C25.7885 21.1795 25.68 21.3225 25.5455 21.4382C25.4111 21.5539 25.2538 21.6398 25.084 21.6903C24.9141 21.7407 24.7356 21.7544 24.5601 21.7307L21.2916 21.285C16.9909 20.6963 12.8703 18.7073 8.91714 15.4001C7.66504 22.3594 10.1106 27.1804 16.0005 30.8997L19.6585 33.2082C19.8323 33.3179 19.9766 33.4687 20.079 33.6474C20.1813 33.826 20.2385 34.0272 20.2456 34.2332C20.2526 34.4392 20.2092 34.6438 20.1193 34.829C20.0294 35.0143 19.8956 35.1747 19.7296 35.296L16.3963 37.7412C18.3791 37.8653 20.2615 37.777 21.8235 37.4658C31.7021 35.4852 38.2705 28.0214 38.2705 15.7091C38.2705 14.7042 36.1515 11.2077 32.1146 11.2077ZM21.8549 17.1157C21.8914 15.089 22.5226 13.1182 23.6693 11.45C24.816 9.78173 26.4274 8.49026 28.3016 7.73725C30.1758 6.98423 32.2296 6.80313 34.2058 7.21663C36.182 7.63012 37.9929 8.61983 39.4116 10.0618C40.9003 10.0513 42.1671 10.4298 45 8.70573C44.2986 12.1538 43.9531 13.6508 42.4581 15.7091C42.4581 31.7764 32.6234 39.5893 22.6442 41.5888C15.8016 42.9596 5.85179 40.7079 3 37.7181C4.45311 37.6046 10.3577 36.9675 13.7706 34.4592C10.8832 32.5481 -0.609751 25.757 6.94267 7.49889C10.4875 11.6555 14.0826 14.4855 17.7259 15.9867C20.1505 16.9854 20.7452 16.9643 21.857 17.1178L21.8549 17.1157Z" fill="white"/>
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_410_102">
-                            <rect width="50" height="50" fill="white"/>
-                          </clipPath>
-                        </defs>
-                        </svg>
+                      <a href="#" class="link-img"> 
                       </a>
                     </li>
                     <li>
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                          <g clip-path="url(#clip0_410_105)">
-                            <path d="M27.1 41.6698C31.3363 41.1308 35.2084 38.9989 37.9293 35.7074C40.6502 32.416 42.0157 28.212 41.7483 23.9499C41.4809 19.6879 39.6006 15.6875 36.4896 12.762C33.3787 9.83647 29.2705 8.20529 25 8.2C20.7243 8.19682 16.6083 9.82401 13.4906 12.75C10.3729 15.676 8.4882 19.6807 8.22046 23.948C7.95272 28.2153 9.32211 32.4241 12.0496 35.7169C14.7771 39.0096 18.6574 41.1385 22.9 41.6698V29.2H18.7V25H22.9V21.5266C22.9 18.7189 23.194 17.7004 23.74 16.6735C24.2778 15.6575 25.1091 14.8269 26.1256 14.29C26.9278 13.8595 27.9253 13.6012 29.6683 13.4899C30.3592 13.4458 31.2538 13.5004 32.3521 13.6579V17.6479H31.3C29.3743 17.6479 28.5784 17.7382 28.1038 17.9923C27.8206 18.1379 27.59 18.3685 27.4444 18.6517C27.1924 19.1263 27.1 19.5967 27.1 21.5245V25H32.35L31.3 29.2H27.1V41.6698ZM25 46C13.4017 46 4 36.5983 4 25C4 13.4017 13.4017 4 25 4C36.5983 4 46 13.4017 46 25C46 36.5983 36.5983 46 25 46Z" fill="white"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_410_105">
-                              <rect width="50" height="50" fill="white"/>
-                            </clipPath>
-                          </defs>
-                        </svg>
+                      <a href="#" class="link-f">
                       </a>
                     </li>
                     <li>
-                      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-                          <g clip-path="url(#clip0_410_95)">
-                            <path d="M40.9726 14.1772C40.813 13.5626 40.3594 13.0985 39.8407 12.9562C38.923 12.7025 34.45 12.125 25 12.125C15.55 12.125 11.0812 12.7025 10.1551 12.9562C9.6427 13.0964 9.1891 13.5605 9.0274 14.1772C8.7985 15.0517 8.2 18.7168 8.2 24.5C8.2 30.2832 8.7985 33.9463 9.0274 34.8249C9.187 35.4374 9.6406 35.9015 10.1572 36.0418C11.0812 36.2975 15.55 36.875 25 36.875C34.45 36.875 38.9209 36.2975 39.8449 36.0438C40.3573 35.9036 40.8109 35.4395 40.9726 34.8228C41.2015 33.9483 41.8 30.275 41.8 24.5C41.8 18.725 41.2015 15.0537 40.9726 14.1772ZM45.0403 13.1521C46 16.8275 46 24.5 46 24.5C46 24.5 46 32.1725 45.0403 35.8479C44.5069 37.8794 42.9466 39.4779 40.9705 40.0182C37.3816 41 25 41 25 41C25 41 12.6247 41 9.0295 40.0182C7.045 39.4696 5.4868 37.8733 4.9597 35.8479C4 32.1725 4 24.5 4 24.5C4 24.5 4 16.8275 4.9597 13.1521C5.4931 11.1206 7.0534 9.52212 9.0295 8.98175C12.6247 8 25 8 25 8C25 8 37.3816 8 40.9705 8.98175C42.955 9.53037 44.5132 11.1268 45.0403 13.1521ZM20.8 31.7188V17.2812L33.4 24.5L20.8 31.7188Z" fill="white"/>
-                          </g>
-                          <defs>
-                            <clipPath id="clip0_410_95">
-                              <rect width="50" height="50" fill="white"/>
-                            </clipPath>
-                          </defs>
-                        </svg>
+                      <a href="#" class="link-youtube">
                       </a>
                     </li>
                 </ul> 
