@@ -37,6 +37,12 @@ body {
     background-size: 1600px 2981px;
     opacity: 0.5; 
  */
+    /* background-image: url('../Pop-up.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1600px 2123px;
+    opacity: 0.5;  */
+
 }
 
 .ul-article {
@@ -737,7 +743,10 @@ h1,h2,h3{
 .form-down-input:active {
     border-bottom: 1px solid #B5885D;
 }
-
+.form-down-input.modal-input {
+    width: 540px;
+    resize: none;
+}
 
 .div-button{
     padding-bottom: 12px;
@@ -761,10 +770,14 @@ h1,h2,h3{
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
-    width: 175px;
+    width: 185px;
     position: relative;
-    
 }
+.book-in-button.modal-button{
+    padding-top: 50px;
+}
+
+
 .book-in-button:hover,
 .result-clear:hover,
 .more-details:hover{
@@ -788,6 +801,15 @@ h1,h2,h3{
     border: 1px solid #B5885D;
     right: -65px;
     top: -12px;
+}
+.book-in-button.modal-button::after{
+    top: 35px;
+}
+.book-in-button.modal-button:hover::after{
+    top: 35px;
+}
+.book-in-button.modal-button:active::after{
+    top: 35px;
 }
 .book-in-button:hover::after{
     position: absolute;
@@ -1295,3 +1317,92 @@ input[type="number"] {
 input[type="number"]::-webkit-inner-spin-button {
 	display: none;
 } */
+
+.modal-backdrop{
+    position: fixed;
+    /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /* цвет фона */
+    z-index: 1;
+    pointer-events: none;
+    
+  
+  }
+  .modal-backdrop.shown{
+    position: fixed;
+    /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* цвет фона */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    
+}
+.modal{
+    max-width: 629px;
+    width: 100%;
+    height: 632px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    background-color: #FCF8F5;
+    position: relative;
+    box-shadow: 0px 4px 41px 0px rgba(0, 0, 0, 0.10);
+    padding-left: 70px;
+
+}
+.close-modal{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #FCF8F5;
+    
+}
+.exit-text{
+    position: absolute;
+    color: #B5885D;
+    transform: rotate(135deg);
+    font-size: 55px;
+    bottom: 3px;
+    top:6px;
+    left: 40px;
+    right: 1px;
+}
+.modal-lable{
+    position: relative;
+    color:#373737;
+    /* Headlines/H4 */
+    font-family: Cormorant;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 48px */
+    text-transform: uppercase;
+    top:100px;
+
+}
+.modal-text{
+    color:  #373737;
+    /* text/text 4 */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 90px;
+}
