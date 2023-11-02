@@ -357,6 +357,9 @@ h1,h2,h3{
     height: 50px;
     background-repeat: no-repeat;
 }
+.hidden{
+    display: none;
+}
 .link-img:hover{
     background:  url('../img/Frame-dark.svg');
     display: block; /*  Рисунок как блочный элемент */
@@ -524,6 +527,7 @@ h1,h2,h3{
     flex-direction: column;
     height: 580px;
    
+   
 }
 .why_visit-2{
     color:#B5AEA4;
@@ -536,6 +540,7 @@ h1,h2,h3{
     margin-top: 0px;
     padding-left: 90px;
     margin-top: 5px;
+    position: relative;
     
 
 }
@@ -545,7 +550,7 @@ h1,h2,h3{
     width: 80px;
     height: 2px;
     background-color:#B5AEA4;
-    right:498px;
+    left:1px;
     top:11px;
 }
 .article-title-2{
@@ -623,7 +628,7 @@ h1,h2,h3{
 }
 
 .adults-kids{
-    width: 239px;
+    width: 255px;
 }
 
 
@@ -640,6 +645,23 @@ h1,h2,h3{
 .form-down-input:invalid::placeholder{
     color:#D62B2B;
 }
+
+.form-down-input-.form-down-input-people {
+    color: #B5AEA4;
+}
+.form-down-input-people:hover::placeholder{
+    color:#473423;
+}
+.form-down-input-people:active::placeholder{
+    color:#B5885D;
+}
+.form-down-input-people:invalid::placeholder{
+    color:#D62B2B;
+}
+
+
+
+
 
 
 .form-down-input[name="checkout"], 
@@ -672,11 +694,26 @@ h1,h2,h3{
 .form-down-input[type="number"] {
   -moz-appearance: textfield;
 }
-.form-down-input[name="adults"], 
-.form-down-input[name="kids"] {
+.form-down-input-people[name="adults"], 
+.form-down-input-people[name="kids"] {
     background-image: url('../img/person.svg');
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: top right;
+}
+
+.form-down-input-people[name="adults"]:hover, 
+.form-down-input-people[name="kids"]:hover {
+    background-image: url('../img/person-hover.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+
+.form-down-input-people[name="adults"]:active, 
+.form-down-input-people[name="kids"]:active {
+    background-image: url('../img/person-active.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
 
@@ -703,6 +740,15 @@ h1,h2,h3{
     appearance: none;
     list-style: none;
     margin-bottom: 27px;
+    
+    padding-bottom: 20px;
+}
+
+.form-down-input-people:active {
+    border-bottom: 1px solid #B5885D;
+}
+.form-down-input-people:hover {
+    border-bottom: 1px solid #473423;
 }
 .form-down-input {
     width: 90%;
@@ -755,7 +801,7 @@ h1,h2,h3{
 .flex-container {
     display: flex;
     margin-bottom: 51px;
-    width: 475px;
+    width: 550px;
     gap: 10px;
 }
 .book-in-button  {
@@ -1035,6 +1081,9 @@ h1,h2,h3{
     display: flex;
     gap: 18px;
 }
+.input-price-number{
+    border: solid 1px;
+}
 ::-moz-range-track {
     border: 2px solid red;
     height: 20px;
@@ -1213,6 +1262,13 @@ h1,h2,h3{
     color:white;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: "Cormorant", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
 }
 .bottom-links{
     display: flex;
@@ -1303,7 +1359,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	display: none;
 }
 
-input[type="number"] {
+input.input-price-number[type="number"] {
 	-moz-appearance: textfield;
 	-webkit-appearance: textfield;
 	appearance: textfield;
