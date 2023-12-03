@@ -1082,8 +1082,19 @@ h1,h2,h3{
     gap: 18px;
 }
 .input-price-number{
-    border: solid 1px;
+    border: solid 1px #B5AEA4;
+    background: none;
+    outline:none;
+
 }
+.input-price-number:hover{
+    border: 1px solid #473423;
+    
+}
+.input-price-number:invalid{
+    border: 1px solid #D62B2B;;
+}
+.input-price-number:active
 ::-moz-range-track {
     border: 2px solid red;
     height: 20px;
@@ -1248,6 +1259,8 @@ h1,h2,h3{
     line-height: normal;
     text-decoration-line: underline;
     text-transform: uppercase;
+    align-self: flex-start;
+    margin-top: auto;
 
 }
 .detalis-button{
@@ -1365,7 +1378,7 @@ input.input-price-number[type="number"] {
 	appearance: textfield;
     width: 115px;
     height: 40px;
-    border-color: #B5AEA4;
+    border-color:  #B5AEA4;
 }
 
  
@@ -1461,4 +1474,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-weight: 400;
     line-height: 24px;
     padding-top: 90px;
+}
+.modal-p{
+    max-width:668px ;
 }
